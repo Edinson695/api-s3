@@ -19,10 +19,10 @@ def lambda_handler(event, context):
     )
 
     if response['KeyCount'] == '0':
-        return (
+        return {
             'statusCode':200,
             'mensaje': 'El directorio no existe'
-        )
+        }
 
     ruta = directorio + '/' + nombre_archivo
 
